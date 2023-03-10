@@ -1,0 +1,39 @@
+.postItem {
+
+  width: 294px;
+  background: white;
+  height: 340px;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px 0px;
+  transition: box-shadow 0.25s ease-in 0s, transform 0.25s ease-in 0s;
+  overflow: hidden;
+  margin: 0 1.2rem 2.4rem 1.2rem;
+  display: inline-block;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+}
+
+.postContent {
+  padding: 15px;
+  height: 270px;
+  border-bottom: darkgray solid 1px;
+}
+
+.postContent > span {
+  font-weight: bold;
+  font-size: large;
+}
+
+.postFooter {
+  padding: 10px 15px;
+  height: 20px;
+  font-size: small;
+}
+
+.postFooter > span:last-child {
+  font-weight: bold;
+  margin-left: 3px;
+}
