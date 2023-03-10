@@ -10,7 +10,7 @@ import { getPostsApi } from '../../services/post';
 import styles from './HomePages.module.scss';
 
 const HomePage: React.FC = () => {
-  const { data } = useQuery(['getPost'], () =>
+  const { data } = useQuery(['getPosts'], () =>
     getPostsApi().then((res) => res.data),
   );
 

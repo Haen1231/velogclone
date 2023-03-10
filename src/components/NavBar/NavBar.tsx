@@ -9,7 +9,7 @@ const NavBar: React.FC = () => {
       <div className={styles.nav}>
         <a href="/">트렌딩</a>
         <a href="/recent">최신</a>
-          <Select/>
+        <Select />
       </div>
     </div>
   );

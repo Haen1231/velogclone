@@ -2,6 +2,7 @@
   "name": "proj_velogclone",
   "version": "0.1.0",
   "private": true,
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -11,6 +12,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "axios": "^1.3.4",
+    "clsx": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
@@ -25,7 +27,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "eject": "react-scripts eject",
     "lint:css": "stylelint --ignore-path .gitignore '**/*.scss'",
-    "prettify": "prettier --write *.js **/*.js",
+    "prettify": "prettier --write **/*.ts **/*.tsx",
     "prepare": "husky install"
   },
   "eslintConfig": {
@@ -65,8 +67,6 @@
     "stylelint-prettier": "^3.0.0",
     "typescript": "^4.9.5"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": ".eslintrc.js",
   "author": "",
   "license": "ISC"
 }
