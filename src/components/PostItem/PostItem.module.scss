@@ -13,6 +13,10 @@
   &:hover {
     transform: translateY(-8px);
   }
+
+  > div {
+    height: 350px;
+  }
 }
 
 .postContent {
@@ -28,7 +32,7 @@
 }
 
 .post_img {
-  height: 250px;
+  height: 150px;
   background: #212529;
   color: white;
   font-size: large;

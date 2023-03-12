@@ -28,17 +28,19 @@ const PostItem: React.FC<Props> = ({ item }) => {
   };
 
   return (
-    <div className={styles.postMain} onClick={onClickPost}>
+    <div className={styles.postMain}>
       <div className={styles.post}>
         <div className={styles.postItem}>
-          <div className={styles.post_img}>
-            <img src="https://picsum.photos/320/150" />
-          </div>
-          <div className={styles.postContent}>
-            <span>{item.title}</span>
-            <p>{item.body}</p>
-            <div className={styles.sub_info}>
-              <span>2일전 · 37개의 댓글</span>
+          <div onClick={onClickPost}>
+            <div className={styles.post_img}>
+              <img src="https://picsum.photos/320/150" />
+            </div>
+            <div className={styles.postContent}>
+              <span>{item.title}</span>
+              <p>{item.body}</p>
+              <div className={styles.sub_info}>
+                <span>2일전 · 37개의 댓글</span>
+              </div>
             </div>
           </div>
           <div className={styles.postFooter}>
