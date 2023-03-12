@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #212529;
+  font-size: 1.3125rem;
+  text-decoration: none;
+  font-family: 'Fira Mono', monospace;
+  text-decoration-color: #282c34;
+  width: 71px;
+  height: 24px;
+
+  &:visited {
+    color: #212529;
+  }
+}
+
+.contents {
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-family: 'Fira Mono', monospace;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: inherit;
+}
