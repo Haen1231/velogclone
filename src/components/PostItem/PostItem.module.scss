@@ -1,13 +1,13 @@
 .postItem {
-  width: 294px;
+  width: 20rem;
+  height: 402px;
   background: white;
-  height: 340px;
   border-radius: 4px;
   box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px 0px;
   transition: box-shadow 0.25s ease-in 0s, transform 0.25s ease-in 0s;
+  margin: 1rem 1rem 2.5rem 1rem;
   overflow: hidden;
-  margin: 0 1.2rem 2.4rem 1.2rem;
-  display: inline-block;
+  display: flex;
   flex-direction: column;
 
   &:hover {
@@ -17,22 +17,84 @@
 
 .postContent {
   padding: 15px;
-  height: 270px;
-  border-bottom: darkgray solid 1px;
+  height: 332px;
+  overflow: hidden;
+
+  > span {
+    font-weight: bold;
+    font-size: large;
+  }
+
 }
 
-.postContent > span {
-  font-weight: bold;
+.post_img {
+  height: 250px;
+  background: #212529;
+  color: white;
   font-size: large;
+  text-align: center;
+}
+
+.sub_info {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: gray;
+  margin: 1.2rem 0;
 }
 
 .postFooter {
-  padding: 10px 15px;
-  height: 20px;
-  font-size: small;
+  padding: 0.625rem 1rem;
+  border-top: darkgray solid 1px;
+  display: flex;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+
+
 }
 
-.postFooter > span:last-child {
-  font-weight: bold;
-  margin-left: 3px;
+.post {
+  display: flex;
+  margin: -1rem;
+  flex-wrap: wrap;
+}
+
+.postMain {
+  flex: 1 1 0%;
+}
+
+.user_info {
+
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+
+  > img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    margin-right: 0.5rem;
+  }
+
+  > span:last-child {
+    font-weight: bold;
+    margin-left: 3px;
+  }
+}
+
+.likes {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+
+  > img {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 0.5rem;
+  }
 }

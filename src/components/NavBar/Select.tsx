@@ -2,7 +2,10 @@ import React, { memo, MouseEventHandler, useCallback, useState } from 'react';
 
 import cx from 'clsx';
 
+import dropdownIMG from '../../Img/sort-down.png';
+
 import styles from './Navbar.module.scss';
+
 
 type SelectOption = 'today' | 'week' | 'month' | 'year';
 
@@ -23,7 +26,10 @@ const SelectItem: React.FC<SelectItemProps> = memo(
   ({ isSelected, onClickItem, value }) => {
     return (
       <li
-        className={cx({ [styles.isSelected]: isSelected })}
+        className={cx(
+          { [styles.isSelected]: isSelected },
+          styles.selectOption_li,
+        )}
         onClick={onClickItem}
       >
         {value}
@@ -48,23 +54,14 @@ const Select: React.FC = () => {
     [],
   );
 
-  // react ( state 덩어리 ) set(state + 1) set(state+1) set(state+1)
-  // set ~~~ set ~~~ set ~~~
-  // virtual stack frame FIBER
-  // 1. render phase => 바뀐게 있나 객체에다가 ( Linked List ) 바꿔놔요 Virtual Dom
-  // 2. commit phase => 동기적으로
-
-  // 트리 두개
-  // Work In Process tree ( setState 뭐시기 => Flushed 업데이트 )
-  // Flushed tree ( html dom 상태 )
-
   return (
-    <div className={styles.wrapper}>
+    <div>
       <div className={styles.select} onClick={handleDropdown}>
-        <div>{SELECT_MAPPER[selectedOption]}</div>
+          {SELECT_MAPPER[selectedOption]}
+          <img src={dropdownIMG} alt='dropdown_IMG' width='1rem' height='1rem'/>
       </div>
       {isOpen && (
-        <div className={styles.optionWrapper}>
+        <div className={styles.selectOptionWrapper}>
           <div className={styles.selectOption}>
             <ul>
               {Object.keys(SELECT_MAPPER).map((item) => (

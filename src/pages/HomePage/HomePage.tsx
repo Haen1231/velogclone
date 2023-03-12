@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {MouseEventHandler} from 'react';
 
 import { useQuery } from 'react-query';
 
-import Logo from '../../components/Logo/Logo';
+import Header from '../../components/Header/Header';
 import NavBar from '../../components/NavBar/NavBar';
 import PostItem from '../../components/PostItem/PostItem';
 import { getPostsApi } from '../../services/post';
@@ -14,10 +14,11 @@ const HomePage: React.FC = () => {
     getPostsApi().then((res) => res.data),
   );
 
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
-        <Logo />
+        <Header />
       </div>
       <div className={styles.body}>
         <NavBar />
