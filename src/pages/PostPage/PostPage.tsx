@@ -3,7 +3,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Header from '../../components/Header/Header';
-import userProfile from '../../Img/user_profile.png';
+import userProfile from '../../assets/user_profile.png';
 
 import styles from './PostPage.module.scss';
 

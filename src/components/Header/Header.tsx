@@ -1,8 +1,8 @@
 import React, { MouseEventHandler, useState } from 'react';
 
-import moonIMG from '../../Img/moon.png';
-import searchIMG from '../../Img/search.png';
-import sunIMG from '../../Img/sun.png';
+import moonIMG from '../../assets/moon.png';
+import searchIMG from '../../assets/search.png';
+import sunIMG from '../../assets/sun.png';
 import Logo from '../Logo/Logo';
 
 import styles from './Header.module.scss';
@@ -10,7 +10,7 @@ import styles from './Header.module.scss';
 const Header: React.FC = () => {
   const [sunON, setSunOn] = useState(true);
 
-  const onClickSun: MouseEventHandler<HTMLDivElement> = (e) => {
+  const onClickSun: MouseEventHandler<HTMLDivElement> = () => {
     setSunOn((prev) => !prev);
   };
   return (

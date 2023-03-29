@@ -2,9 +2,9 @@ import React, { MouseEventHandler, useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import likeOff from '../../Img/like_off.png';
-import likeOn from '../../Img/like_on.png';
-import userProfile from '../../Img/user_profile.png';
+import likeOff from '../../assets/like_off.png';
+import likeOn from '../../assets/like_on.png';
+import userProfile from '../../assets/user_profile.png';
 import { GetPostResponse } from '../../services/post/type';
 
 import styles from './PostItem.module.scss';
@@ -18,12 +18,12 @@ const PostItem: React.FC<Props> = ({ item }) => {
   const [likes, setLikes] = useState(17);
   const navigator = useNavigate();
 
-  const onClickLike: MouseEventHandler<HTMLDivElement> = (e) => {
+  const onClickLike: MouseEventHandler<HTMLDivElement> = () => {
     likeState ? setLikes((prev) => prev - 1) : setLikes((prev) => prev + 1);
     setLikeState((prev) => !prev);
   };
 
-  const onClickPost: MouseEventHandler<HTMLDivElement> = (e) => {
+  const onClickPost: MouseEventHandler<HTMLDivElement> = () => {
     navigator(`/post/`, { state: item });
   };
 

@@ -2,7 +2,7 @@ import React, { memo, MouseEventHandler, useCallback, useState } from 'react';
 
 import cx from 'clsx';
 
-import dropdownIMG from '../../Img/sort-down.png';
+import dropdownIMG from '../../assets/sort-down.png';
 
 import styles from './Navbar.module.scss';
 
@@ -42,7 +42,7 @@ const Select: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<SelectOption>('today');
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleDropdown: MouseEventHandler<HTMLDivElement> = (e) => {
+  const handleDropdown: MouseEventHandler<HTMLDivElement> = () => {
     setIsOpen((prev) => !prev);
   };
 

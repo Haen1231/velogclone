@@ -1,6 +1,6 @@
 import React, { MouseEventHandler, useState } from 'react';
 
-import seeMoreIMG from '../../Img/more.png';
+import seeMoreIMG from '../../assets/more.png';
 
 import styles from './SeeMore.module.scss';
 
@@ -15,7 +15,7 @@ const SEEMORE_MAPPER: Record<SeeMoreOption, string> = {
 const SeeMore: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleDropdown: MouseEventHandler<HTMLDivElement> = (e) => {
+  const handleDropdown: MouseEventHandler<HTMLDivElement> = () => {
     setIsOpen((prev) => !prev);
   };
 

@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import { DropdownPage } from './pages/DropdownPage';
 import { HomePage } from './pages/HomePage';
+import { ModalPage } from './pages/ModalPage';
 import { PostPage } from './pages/PostPage';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/recent" element={<HomePage />} />
         <Route path="/post" element={<PostPage />} />
         <Route path="/dropdown" element={<DropdownPage />} />
+        <Route path="/modal" element={<ModalPage />} />
       </Routes>
     </Router>
   );
