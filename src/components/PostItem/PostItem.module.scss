@@ -12,6 +12,8 @@
 
   &:hover {
     transform: translateY(-8px);
+    z-index: 1;
+    cursor: auto;
   }
 
   > div {

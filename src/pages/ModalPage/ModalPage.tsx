@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-import Modal from '../../components/Modal/Modal';
-import ModalPotal from '../../components/Modal/ModalPotal';
+import PresentModal from '../../components/Modal/PresentModal/PresentModal';
+
 
 import styles from './ModalPage.module.scss';
+
 
 const ModalPage: React.FC = () => {
   const [isShow, setIsShow] = useState(false);
@@ -16,13 +17,11 @@ const ModalPage: React.FC = () => {
       <header>
         <h3>Modal Page</h3>
       </header>
-      <body>
+      <div className={styles.contents}>
         <span>아래의 버튼을 눌러 modal을 확인해보세요</span>
-        <button onClick={onClick}> 핸의 모달 보러가기 </button>
-      </body>
-      <ModalPotal isShow={isShow} onClose={onClick}>
-        <Modal isShow={isShow} onClose={onClick}/>
-      </ModalPotal>
+        <button onClick={onClick}> 핸의 모달 보러가기</button>
+      </div>
+      <PresentModal isShow={isShow} onClose={onClick} />
     </div>
   );
 };

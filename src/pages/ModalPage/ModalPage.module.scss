@@ -19,7 +19,7 @@
     }
   }
 
-  body {
+  .contents {
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -47,6 +47,7 @@
       &:hover {
         background-color: lightslategray;
         color: white;
+        cursor: auto;
       }
     }
 

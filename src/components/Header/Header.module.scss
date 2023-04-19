@@ -3,6 +3,7 @@
   -webkit-box-align: center;
   align-items: center;
   position: relative;
+  z-index: 5;
 
   > a {
     display: flex;
@@ -48,6 +49,7 @@
   color: white;
   transition: all 0.125s ease-in 0s;
   cursor: pointer;
+  z-index: 5;
 }
 
 .wrapper {

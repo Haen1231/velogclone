@@ -1,5 +1,6 @@
-import React, { memo, ReactNode, useRef } from 'react';
+import React, { memo, MouseEventHandler, ReactNode, useRef } from 'react';
 
+import cx from 'clsx';
 import { createPortal } from 'react-dom';
 import { CSSTransition } from 'react-transition-group';
 
@@ -9,15 +10,39 @@ const modalRoot = document.querySelector('#modal') as HTMLDivElement;
 
 export interface Props {
   isShow: boolean;
-  onClose: () => void;
+  onClose: MouseEventHandler<HTMLElement>;
+
+  className?: string;
   children?: ReactNode;
 }
 
-const ModalPotal: React.FC<Props> = ({ isShow, children, onClose }) => {
+const ModalPotal: React.FC<Props> = ({
+  isShow,
+  children,
+  onClose,
+  className,
+}) => {
   const nodeRef = useRef(null);
   return createPortal(
-    <CSSTransition in={isShow} timeout={100} nodeRef={nodeRef} unmountOnExit={true}>
-      <div className={styles.potalwrapper} ref={nodeRef}>{children}</div>
+    <CSSTransition
+      in={isShow}
+      timeout={100}
+      nodeRef={nodeRef}
+      classNames={{
+        enterActive: styles.enterActive,
+      }}
+      unmountOnExit
+    >
+      <div className={styles.enterActive}>
+        <div
+          role={'button'}
+          tabIndex={-1}
+          className={styles.potalwrapper}
+        ></div>
+        <aside className={cx(styles.modalWrapper, className)} ref={nodeRef}>
+          {children}
+        </aside>
+      </div>
     </CSSTransition>,
     modalRoot,
   );
