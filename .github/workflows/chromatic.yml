@@ -15,6 +15,14 @@ jobs:
       - run: yarn
         #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@v1
+        with:
+          fetch-depth: 0
+      - name: yarn install
+        run: yarn install
+      - name: build storybook
+        run: yarn build-storybook
+      - name: upload to chromatic
+        uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
         with:
           #👇 Chromatic projectToken,
