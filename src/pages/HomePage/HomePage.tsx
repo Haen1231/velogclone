@@ -47,14 +47,20 @@ const HomePage: React.FC = () => {
             }
           }
         }
-
         //이전 스크롤값 저장
         beforeScrollY.current = currentScrollY;
       }, 500),
     [isHidden, beforeScrollY],
   );
+    useEffect(() => {
+        const handler = () => {};
 
-  window.addEventListener('scroll', scrollEvent);
+        window.addEventListener('scroll', scrollEvent);
+
+        return () => {
+            window.removeEventListener('scroll', handler);
+        }
+    },[scrollEvent])
 
   return (
     <div className={styles.wrapper} style={style}>

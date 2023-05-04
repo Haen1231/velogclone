@@ -30,12 +30,24 @@
     "eject": "react-scripts eject",
     "lint:css": "stylelint --ignore-path .gitignore '**/*.scss'",
     "prettify": "prettier --write **/*.ts **/*.tsx",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -51,25 +63,38 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.8",
+    "@storybook/addon-interactions": "^7.0.8",
+    "@storybook/addon-links": "^7.0.8",
+    "@storybook/blocks": "^7.0.8",
+    "@storybook/preset-create-react-app": "^7.0.8",
+    "@storybook/react": "^7.0.8",
+    "@storybook/react-webpack5": "^7.0.8",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@tanstack/react-query-devtools": "^4.26.1",
     "@types/lodash": "^4.14.192",
     "@types/react-transition-group": "^4.4.5",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "eslint": "^8.35.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-storybook": "^0.6.12",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.0.8",
     "stylelint": "^15.2.0",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-config-standard-scss": "^7.0.1",
     "stylelint-prettier": "^3.0.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "webpack": "^5.82.0"
   },
   "author": "",
   "license": "ISC"
