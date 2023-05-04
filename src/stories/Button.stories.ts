@@ -31,3 +31,12 @@ export const Blue:Story = {
     color: "white",
   }
 };
+
+export const Login:Story = {
+  args : {
+    label: "Login",
+    backgroundColor: "green",
+    size: "lg",
+    color: "white",
+  }
+};
