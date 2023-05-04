@@ -1,0 +1,140 @@
+.nav {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+
+  > a {
+    width: 7rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: darkgray;
+    height: 3rem;
+
+    img {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+
+  }
+
+  .dropdown {
+    background-color: darkslategrey;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 10px;
+    margin-left: 20px;
+  }
+
+}
+
+.navWrapper {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.select {
+  background: white;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 4px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-weight: 600;
+  color: black;
+  font-size: 0.875rem;
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
+  cursor: pointer;
+
+  > img {
+    width: 12px;
+    height: 12px;
+  }
+
+}
+
+.selectOptionWrapper {
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: 5;
+}
+
+.option {
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: 5;
+}
+
+.selectOption {
+  margin-top: 0.5rem;
+  width: 12rem;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px 0px;
+  background: white;
+  color: black;
+  transform-origin: right top;
+
+  ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 0px;
+  }
+
+  .selectOption_li {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+
+    & + li {
+      border-top: 1px solid gainsboro;
+    }
+
+    &.isSelected {
+      color: deeppink;
+    }
+
+    &:hover {
+      background-color: gainsboro;
+    }
+  }
+
+
+}
+
+.nav_selected {
+  color: black !important;
+  border-bottom: #282c34 solid 2px;
+}
+

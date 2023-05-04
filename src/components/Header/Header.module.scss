@@ -1,0 +1,78 @@
+.icons {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+
+  > a {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    outline: none;
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+}
+
+.btn_sun {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.25rem;
+  color: white;
+  position: relative;
+}
+
+.btn_login {
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  word-break: keep-all;
+  background: #212529;
+  color: white;
+  transition: all 0.125s ease-in 0s;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.wrapper {
+  height: 4rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.25rem;
+  color: white;
+  position: relative;
+
+  &:hover {
+    background-color: lightgray;
+  }
+}

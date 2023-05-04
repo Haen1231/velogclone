@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+
+  .dropdown {
+    background: white;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-weight: 600;
+    color: black;
+    font-size: 0.875rem;
+    box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  .dropdownWrapper {
+    position: absolute;
+    top: 28%;
+    z-index: 5;
+  }
+
+  .dropdownContents {
+    margin-top: 0.5rem;
+    width: 12rem;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px 0px;
+    background: white;
+    color: black;
+    transform-origin: right top;
+
+
+    ul {
+      list-style-type: none;
+      padding-left: 0px;
+      margin: 0px;
+    }
+
+    li {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.75rem 1rem;
+
+      & + li {
+        border-top: 1px solid gainsboro;
+      }
+
+      &.isSelected {
+        color: deeppink;
+      }
+
+      &:hover {
+        background-color: gainsboro;
+      }
+    }
+
+
+  }
+}
+
