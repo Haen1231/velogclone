@@ -1,0 +1,24 @@
+# Workflow name
+name: 'Chromatic Publish'
+
+# Event for the workflow
+on: push
+
+# List of jobs
+jobs:
+  test:
+    # Operating System
+    runs-on: ubuntu-latest
+    # Job steps
+    steps:
+      - name: yarn install
+        run: yarn install
+      - name: build storybook
+        run: yarn build-storybook
+      - name: upload to chromatic
+        uses: chromaui/action@v1
+        # Options required for Chromatic's GitHub Action
+        with:
+          #👇 Chromatic projectToken,
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
