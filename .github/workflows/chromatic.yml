@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
-      - uses: actions/checkout@v3
-        #👇 Adds Chromatic as a step in the workflow
       - name: yarn install
         run: yarn install
       - name: build storybook
